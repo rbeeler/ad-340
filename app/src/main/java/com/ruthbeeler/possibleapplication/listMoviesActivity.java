@@ -7,27 +7,36 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ListView;
+import android.widget.SimpleAdapter;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
 
 public class listMoviesActivity extends AppCompatActivity {
+    ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_movies);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        listView = findViewById(R.id.list);
+        List<HashMap<String, String>> list = new ArrayList<HashMap<String, String>>();
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        for (int i = 0; i < movies.length; i++) {
+            HashMap<String, String> hm = new HashMap<String, String>();
+            hm.put("image", movies[i][3]);
+            hm.put("title", movies[i][0]);
+            hm.put("year", movies[i][1]);
+            list.add(hm);
+        }
 
+        String[] start = { "image", "title", "year" };
+        int[] end = { R.id.image, R.id.title, R.id.subtitle};
+
+        SimpleAdapter simpleAdapter = new SimpleAdapter(getBaseContext(), list, R.layout.movie_list, start, end);
+        listView.setAdapter(simpleAdapter);
     }
-
 
     String[][] movies = {
             {"Night of the Comet","1984","","http://collider.com/wp-content/uploads/2016/10/night-of-comet.jpg","What would kids in the 1980s do if the apocalypse blew through the world without them noticing? Hang out at the mall, but of course. That’s the set-up for this very funny, quite dated horror-comedy, which begins when a quartet of adolescents lock themselves inside a projection booth at the mall’s multiplex. This somehow allows them to live through an extinction level event of some sort, which has also left roaming bands of murderous mutants. Catherine Mary Stewart of the equally inexplicable Weekend at Bernie’s leads the film, but it’s a movie of mood more than substance ultimately. Does the wealth-fueled naiveté of the average white teenager survive in a vacuum? Does it go away when they are being hunted for sustenance? It’s an interesting to watch on these terms and when the zombies show up, director Thom Eberhardt adds menace and a tight feel for suspense to the action sequences. And if we’re being honest, it belongs on this list for its soundtrack alone. The rest of this is just whip cream and cherries. – Chris Cabin"},
