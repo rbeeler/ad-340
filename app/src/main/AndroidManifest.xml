@@ -3,7 +3,6 @@
     package="com.ruthbeeler.possibleapplication">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    android:usesCleartextTraffic="true"
 
     <application
         android:allowBackup="true"
@@ -13,9 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".About"
+            android:label="@string/title_activity_about"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".listMoviesActivity"
             android:label="@string/title_activity_list_movies"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
