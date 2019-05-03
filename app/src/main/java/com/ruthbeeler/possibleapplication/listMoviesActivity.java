@@ -6,6 +6,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import java.util.ArrayList;
@@ -15,23 +16,26 @@ import java.util.List;
 
 public class listMoviesActivity extends AppCompatActivity {
     ListView listView;
+    ImageView ivBasicImage;
+    /*Picasso.with(context).load(imageUri).into(image);*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_movies);
         listView = findViewById(R.id.list);
+        ivBasicImage = (ImageView) findViewById(R.id.image);
         List<HashMap<String, String>> list = new ArrayList<HashMap<String, String>>();
 
         for (int i = 0; i < movies.length; i++) {
-            HashMap<String, String> hm = new HashMap<String, String>();
-            hm.put("image", movies[i][3]);
-            hm.put("title", movies[i][0]);
-            hm.put("year", movies[i][1]);
-            list.add(hm);
+            HashMap<String, String> movieItem = new HashMap<String, String>();
+            movieItem.put("img", movies[i][3]);
+            movieItem.put("title", movies[i][0]);
+            movieItem.put("year", movies[i][1]);
+            list.add(movieItem);
         }
 
-        String[] start = { "image", "title", "year" };
+        String[] start = { "img", "title", "year" };
         int[] end = { R.id.image, R.id.title, R.id.subtitle};
 
         SimpleAdapter simpleAdapter = new SimpleAdapter(getBaseContext(), list, R.layout.movie_list, start, end);
