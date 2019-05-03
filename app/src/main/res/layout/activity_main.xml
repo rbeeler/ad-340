@@ -6,6 +6,14 @@
     android:layout_height="wrap_content"
     tools:context=".MainActivity">
 
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        android:layout_width="521dp"
+        android:layout_height="0dp"
+        tools:layout_editor_absoluteX="-47dp"
+        tools:layout_editor_absoluteY="2dp" />
+
     <EditText
         android:id="@+id/editText"
         android:layout_width="0dp"

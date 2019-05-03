@@ -6,12 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".listMoviesActivity">
 
+
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay"/>
 
     <include layout="@layout/content_list_movies" />
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
