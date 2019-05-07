@@ -23,6 +23,7 @@ public class listMoviesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_movies);
+
         listView = findViewById(R.id.list);
         ivBasicImage = (ImageView) findViewById(R.id.image);
         List<HashMap<String, String>> list = new ArrayList<HashMap<String, String>>();
