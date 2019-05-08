@@ -3,6 +3,7 @@ package com.ruthbeeler.possibleapplication;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -26,6 +27,17 @@ public class listMoviesActivity extends AppCompatActivity {
         listView = findViewById(R.id.list);
         ivBasicImage = (ImageView) findViewById(R.id.image);
         List<HashMap<String, String>> list = new ArrayList<HashMap<String, String>>();
+
+        // my_child_toolbar is defined in the layout file
+        Toolbar Toolbar =
+                (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(Toolbar);
+
+        // Get a support ActionBar corresponding to this toolbar
+        ActionBar ab = getSupportActionBar();
+
+        // Enable the Up button
+        ab.setDisplayHomeAsUpEnabled(true);
 
         for (int i = 0; i < movies.length; i++) {
             HashMap<String, String> movieItem = new HashMap<String, String>();
