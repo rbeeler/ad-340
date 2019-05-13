@@ -6,19 +6,27 @@
     android:layout_height="wrap_content"
     tools:context=".MainActivity">
 
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        android:layout_width="521dp"
+        android:layout_height="0dp"
+        tools:layout_editor_absoluteX="-47dp"
+        tools:layout_editor_absoluteY="2dp" />
+
     <EditText
         android:id="@+id/editText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="52dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="@string/edit_message"
         app:layout_constraintEnd_toStartOf="@+id/button"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
     <Button
         android:id="@+id/button"
@@ -41,7 +49,7 @@
         android:layout_marginBottom="488dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button"
         app:layout_constraintVertical_bias="0.0">
@@ -50,34 +58,35 @@
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/movie_button"
-            android:onClick = "getMovieList"/>
+            android:onClick="getMovieList"
+            android:text="@string/movie_button" />
 
         <Button
             android:id="@+id/button6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="displayToastt"
             android:text="@string/top_right"
             app:layout_column="22"
-            app:layout_row="0"
-            android:onClick = "displayToastt"/>
+            app:layout_row="0" />
 
         <Button
             android:id="@+id/button7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="displayToast"
             android:text="@string/bottom_left"
             app:layout_column="0"
-            app:layout_row="45"
-            android:onClick = "displayToast"/>
+            app:layout_row="45" />
 
         <Button
             android:id="@+id/button8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="displayToast"
             android:text="@string/bottom_right"
             app:layout_column="22"
-            app:layout_row="45"
-            android:onClick = "displayToast"/>
+            app:layout_row="45" />
     </android.support.v7.widget.GridLayout>
+
 </android.support.constraint.ConstraintLayout>
