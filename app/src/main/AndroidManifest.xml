@@ -13,9 +13,13 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".SingleMovieActivity"
+            android:label="@string/title_activity_single_movie"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".listMoviesActivity"
             android:label="@string/title_activity_list_movies"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
