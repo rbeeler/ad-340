@@ -7,5 +7,16 @@
     <string name="bottom_left">3</string>
     <string name="bottom_right">4</string>
     <string name="title_activity_list_movies">listMoviesActivity</string>
+    <
+    <
+    <
+    <
+    <
+    <
+    < HEAD
     <string name="title_activity_single_movie">SingleMovieActivity</string>
+    =======
+    <string name="title_activity_about">About</string>
+    <string name="title_activity_camera">CameraActivity</string>
+    >>>>>>> ea0a94c1be31ba0ae3a0dc7bbc50cdb03b8882ef
 </resources>
