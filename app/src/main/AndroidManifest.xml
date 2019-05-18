@@ -3,15 +3,8 @@
     package="com.ruthbeeler.possibleapplication">
 
     <uses-permission android:name="android.permission.INTERNET" />
-<<<<<<< HEAD
-<<<<<<< HEAD
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-=======
-    android:usesCleartextTraffic="true"
->>>>>>> parent of 03e7267... made suggested picasso changes
-=======
-    android:usesCleartextTraffic="true"
->>>>>>> parent of 03e7267... made suggested picasso changes
+
 
     <application
         android:allowBackup="true"
@@ -20,24 +13,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-<<<<<<< HEAD
+
         <activity
             android:name=".CameraActivity"
             android:label="@string/title_activity_camera"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-=======
->>>>>>> parent of 03e7267... made suggested picasso changes
+
         <activity
             android:name=".listMoviesActivity"
             android:label="@string/title_activity_list_movies"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName="com.ruthbeeler.possibleapplication.MainActivity" />
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.ruthbeeler.possibleapplication.MainActivity" />
+
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
 
+    </application>
 </manifest>
