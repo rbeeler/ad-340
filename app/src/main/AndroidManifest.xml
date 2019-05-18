@@ -17,11 +17,26 @@
         <activity
             android:name=".CameraActivity"
             android:label="@string/title_activity_camera"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName="com.ruthbeeler.possibleapplication.MainActivity" />
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ruthbeeler.possibleapplication.MainActivity" />
 
         <activity
             android:name=".listMoviesActivity"
             android:label="@string/title_activity_list_movies"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName="com.ruthbeeler.possibleapplication.MainActivity" />
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.ruthbeeler.possibleapplication.MainActivity" />
+
+        <activity
+            android:name=".About"
+            android:label="@string/title_activity_about"
             android:theme="@style/AppTheme.NoActionBar"
             android:parentActivityName="com.ruthbeeler.possibleapplication.MainActivity" />
         <!-- Parent activity meta-data to support 4.0 and lower -->
