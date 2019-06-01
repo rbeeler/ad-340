@@ -52,4 +52,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, listMoviesActivity.class);
         startActivity(intent);
     }
+
+    public void getTrafficList(View view) {
+        Intent intent = new Intent(this, CameraActivity.class);
+        startActivity(intent);
+    }
 }

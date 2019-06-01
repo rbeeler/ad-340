@@ -4,7 +4,7 @@
     <string name="send_button">Send</string>
     <string name="movie_button">Movies</string>
     <string name="top_right">2</string>
-    <string name="bottom_left">3</string>
+    <string name="bottom_left">TraffCams</string>
     <string name="bottom_right">4</string>
     <string name="title_activity_list_movies">listMoviesActivity</string>
     <string name="title_activity_single_movie">SingleMovieActivity</string>
