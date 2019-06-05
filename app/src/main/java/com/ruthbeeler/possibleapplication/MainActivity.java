@@ -53,6 +53,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void getMap(View view) {
+        Intent intent = new Intent(this, MapActivity.class);
+        startActivity(intent);
+    }
+
     public void getTrafficList(View view) {
         Intent intent = new Intent(this, CameraActivity.class);
         startActivity(intent);

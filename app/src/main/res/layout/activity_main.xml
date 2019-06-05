@@ -65,7 +65,7 @@
             android:id="@+id/button6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="displayToast"
+            android:onClick="getMap"
             android:text="@string/top_right"
             app:layout_column="22"
             app:layout_row="0" />
