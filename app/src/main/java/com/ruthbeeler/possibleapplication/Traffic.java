@@ -14,5 +14,15 @@ public class Traffic {
         this.coordinates = coordinates;
 
     }
+    public String imageUrl() {
+        return this.image;
+    }
 
+    public String getLabel(){
+        return this.label;
+    }
+
+    public double[] myCoordinates(){
+        return this.coordinates;
+    }
 }
