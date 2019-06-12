@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">Ruths Application</string>
-    <string name="edit_message">Enter a Message</string>
-    <string name="send_button">Send</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="send_button">Login</string>
     <string name="movie_button">Movies</string>
     <string name="top_right">Map</string>
     <string name="bottom_left">TraffCams</string>
