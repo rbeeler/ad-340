@@ -13,12 +13,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity
+            android:name=".TeamActivity"
+            android:label="@string/title_activity_team"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".MapActivity"
             android:label="@string/title_activity_map"
-            android:parentActivityName=".MainActivity"></activity>
-
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".CameraActivity"
             android:label="@string/title_activity_camera"
@@ -49,6 +51,7 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -56,10 +59,9 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
-
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value='AIzaSyBgMMgewfsrNdMZSadd2R2_DSWPvKjsgUE'/>
+            android:value="AIzaSyBgMMgewfsrNdMZSadd2R2_DSWPvKjsgUE" />
     </application>
 
 </manifest>

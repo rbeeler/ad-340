@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Ruths Application</string>
-    <string name="name">Name</string>
-    <string name="email">Email</string>
-    <string name="password">Password</string>
+    <string name="name">Ruth Beeler</string>
+    <string name="email">ruthbeeler3@gmail.com</string>
+    <string name="password">strawberry</string>
     <string name="send_button">Login</string>
     <string name="movie_button">Movies</string>
     <string name="top_right">Map</string>
@@ -13,4 +13,6 @@
     <string name="title_activity_about">About</string>
     <string name="title_activity_camera">CameraActivity</string>
     <string name="title_activity_map">Map</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_team">TeamActivity</string>
 </resources>
